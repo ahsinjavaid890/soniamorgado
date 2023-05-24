@@ -1,83 +1,133 @@
 @extends('frontend.layouts.main')
-@include('frontend.companypages.includes.mettatittle')
+@section('tittle')
+<title>Contact Us</title>
+@endsection
 @section('content')
-
-<style type="text/css">
-    
-.cnctmain {
-    background-image: url('{{ asset('public/front/img/images/lifeadvice-trans.png') }}');
-    background-repeat: no-repeat,no-repeat;
-    background-position: left top, bottom right;
-    padding-bottom: 100px !important;
-    padding-top: 100px;
-}
-</style>
-@include('frontend.companypages.includes.main')
-        <div class="container-fluid pt-5 pl-0 pr-0">
-
-        <div class="row pb-2 d-none contactus align-items-center">
-            <h1 class="text-center">Got questions about insurance?</h1>
-
-            <div class="col-md-6 py-3 text-center offset-md-3">
-                <h5>Get answers to your questions from our Insurance Experts. We will also assist you all the way with your insurance application.</h5>
-                <p>Speak with our Advisors anytime</p>
-            </div>
-
-        </div>
-
-        <div class="container-fluid pb-5 cnctmain">
-            <div class="container">
-                <div class="row  row-eq-height">
-
-                    <div class="col-md-5 contactadd align-items-center">
-                        <h2 class="contact-heading"><span>Contact</span> Address</h2>
-                        <p>Get answers to your questions from our Insurance Experts. We will also assist you all the way with your insurance application.</p>
-                        <p>Speak with our Advisors anytime</p>
-
-                        <div class="col-md-12 add">
-                            <h5><i class="fa fa-map-marker"></i>   Address </h5><p> {{ Cmf::get_store_value('site_address') }} </p>
-                        </div>
-            
-                        <div class="col-md-12 add">
-                            <h5><i class="fa fa-phone"></i> Phone  </h5>
-                            <p>{{ Cmf::get_store_value('site_phonenumber') }}</p></div> 
-
-                            <div class="col-md-12 add">
-                                <h5><i class="fa fa-envelope"></i> Email </h5>
-                                <p><span class="__cf_email__" data-cfemail="cea6aba2a2a18ebdbbbcabbab7e0ada1a3"> {{ Cmf::get_store_value('site_email') }}</span></p>
+<!-- start wpo-page-title -->
+<section class="wpo-page-title" style="background: url('{{ url('') }}/public/front/images/page-title.jpg') no-repeat center top/cover">
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="wpo-breadcumb-wrap">
+                    <h2>Contact Us</h2>
+                    <ol class="wpo-breadcumb-wrap">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Contact</li>
+                    </ol>
+                </div>
+            </div>  
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+<!-- start wpo-contact-pg-section -->
+<section class="wpo-contact-pg-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-10 offset-lg-1">
+                <div class="office-info">
+                    <div class="row">
+                        <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
+                            <div class="office-info-item">
+                                <div class="office-info-icon">
+                                    <div class="icon">
+                                        <i class="fi flaticon-011-maps-and-flags"></i>
+                                    </div>
+                                </div>
+                                <div class="office-info-text">
+                                    <h2>Address</h2>
+                                    <p>7 Green Lake Street Crawfordsville, IN 47933</p>
+                                </div>
                             </div>
                         </div>
-            
-                        <div class="col-md-7 contactform" id="contact-result">
-                            <div id="result"></div>
-                            @include('alerts.index')
-                            <h2 class="contact-heading"><span>Send a</span> Message</h2>
-                            <h5><span>Please fill the form below and submit... We will contact you.</span></h5>
-                            <form method="post" action="{{ url('contactus') }}" id="contact-form" enctype="multipart/form-data">
-                                 @csrf
-                                <div class="row">
-                                    <p class="col-6"><label class="">Your Name *</label><br><span><input type="text" name="fname" class="form-control"></span></p>
-                                    <p class="col-6"><label class="">Your Last Name</label><br><span><input type="text" name="lname" class="form-control"></span></p>
-                                    <p class="col-6"><label class="">Your Email *</label><br><span><input type="text" name="email" class="form-control"></span></p>
-                                    <p class="col-6"><label class="">Your Contact No *</label><br><span><input type="text" name="mobile" class="form-control"></span></p>
-                                    <p class="col-12"><label class="">Your Subject</label><br><span><input type="text" name="subject" class="form-control"></span></p>
-                                    <p class="col-12"><label class="">Your Message</label><br><span><textarea name="description" rows="2" class="form-control" required></textarea></span></p>
-                                    <p class="col-12">
-                                        <input type="submit" class="btn-lg save-btn mr-4" name="submit" value="Submit">
-                                    </p>
+                        <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
+                            <div class="office-info-item">
+                                <div class="office-info-icon">
+                                    <div class="icon">
+                                        <i class="fi flaticon-037-email-1"></i>
+                                    </div>
                                 </div>
-                            </form>
+                                <div class="office-info-text">
+                                    <h2>Email Us</h2>
+                                    <p>Avukat@gmail.com</p>
+                                    <p>helloyou@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
+                            <div class="office-info-item">
+                                <div class="office-info-icon">
+                                    <div class="icon">
+                                        <i class="fi flaticon-009-telephone"></i>
+                                    </div>
+                                </div>
+                                <div class="office-info-text">
+                                    <h2>Call Now</h2>
+                                    <p>+1 800 123 456 789</p>
+                                    <p>+1 800 123 654 987</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="vector-contact">
-                        <img src="{{ asset('public/front/img/images/men-head.png') }}">
-                    </div>
+                </div>
+                <div class="wpo-contact-title">
+                    <h2>Have Any Question?</h2>
+                    <p>It is a long established fact that a reader will be distracted
+                        content of a page when looking.</p>
+                </div>
+                <div class="wpo-contact-form-area">
+                    <form method="post" class="contact-validation-active" id="contact-form-main">
+                        <div>
+                            <input type="text" class="form-control" name="name" id="name"
+                                placeholder="Your Name*">
+                        </div>
+                        <div>
+                            <input type="email" class="form-control" name="email" id="email"
+                                placeholder="Your Email*">
+                        </div>
+                        <div>
+                            <input type="text" class="form-control" name="phone" id="phone"
+                                placeholder="Your Phone*">
+                        </div>
+                        <div>
+                            <select name="subject" class="form-control">
+                                <option disabled="disabled" selected>Subject</option>
+                                <option>Family Law</option>
+                                <option>Personal Injury</option>
+                                <option>Criminal Law</option>
+                                <option>Education Law</option>
+                                <option>Business Law</option>
+                            </select>
+                        </div>
+                        <div class="fullwidth">
+                            <textarea class="form-control" name="note" id="note"
+                                placeholder="Message..."></textarea>
+                        </div>
+                        <div class="submit-area">
+                            <button type="submit" class="theme-btn-s2">Get in Touch</button>
+                            <div id="loader">
+                                <i class="ti-reload"></i>
+                            </div>
+                        </div>
+                        <div class="clearfix error-handling-messages">
+                            <div id="success">Thank you</div>
+                            <div id="error"> Error occurred while sending email. Please try again later. </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-            <div>
-                <div class="row">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2898.706305242645!2d-80.52393728446313!3d43.40406767913069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf5f33283b73d%3A0x11d11e5af5f01ae3!2s912+Isaiah+Pl%2C+Kitchener%2C+ON+N2E+0B6%2C+Canada!5e0!3m2!1sen!2sin!4v1559567604280!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
+    </div> <!-- end container -->
+</section>
+<!-- end wpo-contact-pg-section -->
+
+<!--  start wpo-contact-map -->
+<section class="wpo-contact-map-section">
+    <h2 class="hidden">Contact map</h2>
+    <div class="wpo-contact-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671"
+            allowfullscreen></iframe>
+    </div>
+</section>
+<!-- end wpo-contact-map -->
 @endsection

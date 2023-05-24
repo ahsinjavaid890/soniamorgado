@@ -33,7 +33,7 @@ Route::get('/privacypolicy', [SiteController::class, 'privacypolicy']);
 Route::get('/blogs', [SiteController::class, 'blogs']);
 Route::get('/blog/{id}', [SiteController::class, 'blogdetail']);
 Route::get('/category/{id}', [SiteController::class, 'blogbycategory']);
-Route::get('/registeralert', [RegisterController::class, 'registeralert'])->name('registeralert');
+Route::get('/services', [SiteController::class, 'services']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [CarrierController::class, 'index']);
 Route::get('/all/newsletters',[SiteController::class , 'viewLetters'])->name('view_news');
