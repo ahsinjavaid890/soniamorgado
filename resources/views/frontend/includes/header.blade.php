@@ -60,7 +60,7 @@
                             <button class="menu-close"><i class="ti-close"></i></button>
                             <ul class="nav navbar-nav mb-2 mb-lg-0">
                                 <li class="@if($url) @else active @endif"><a href="{{ url('') }}">Home</a></li>
-                                <li><a href="{{ url('aboutus') }}">News and Updates</a></li>
+                                <li><a href="{{ url('aboutus') }}">About US</a></li>
                                 <li class="@if($url) @else active @endif"><a href="{{ url('services') }}">Services</a></li>
                                 <li><a href="{{ url('blogs') }}">News and Updates</a></li>
                                 <li><a href="{{ url('contactus') }}">Contact</a></li>
