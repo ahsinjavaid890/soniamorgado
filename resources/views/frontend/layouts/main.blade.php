@@ -39,7 +39,6 @@
 			@yield('content')
 		@include('frontend.includes.footer')
     </div>
-    ================================================== -->
     <script src="{{ url('public/front/js/jquery.min.js') }}"></script>
     <script src="{{ url('public/front/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url('public/front/js/modernizr.custom.js') }}"></script>

@@ -60,18 +60,10 @@
                             <button class="menu-close"><i class="ti-close"></i></button>
                             <ul class="nav navbar-nav mb-2 mb-lg-0">
                                 <li class="@if($url) @else active @endif"><a href="{{ url('') }}">Home</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Practice</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="practice.html">Practice</a></li>
-                                        <li><a href="practice-s2.html">Practice Style 2</a></li>
-                                        <li><a href="practice-s3.html">Practice Style 3</a></li>
-                                        <li><a href="practice-single.html">Practice Single</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="{{ url('aboutus') }}">News and Updates</a></li>
                                 <li class="@if($url) @else active @endif"><a href="{{ url('services') }}">Services</a></li>
-                                <li><a href="contact.html">News and Updates</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{ url('blogs') }}">News and Updates</a></li>
+                                <li><a href="{{ url('contactus') }}">Contact</a></li>
                             </ul>
                         </div><!-- end of nav-collapse -->
                     </div>
