@@ -8,10 +8,13 @@
                 <div class="col col-lg-7 col-sm-12 col-12">
                     <div class="contact-intro">
                         <ul>
-                            <li><i class="fi flaticon-009-telephone"></i>(307) 555-0133</li>
-                            <li><i class="fi flaticon-010-email"></i>demo.Avukat@gmail.com</li>
-                            <li><i class="fi flaticon-011-maps-and-flags"></i> 244 Royal Ln. Mesa, New Jersey
-                                463</li>
+                            <li><i class="fi flaticon-009-telephone"></i>{{ Cmf::get_store_value('site_phonenumber') }}</li>
+                            <li><i class="fi flaticon-010-email"></i>{{ Cmf::get_store_value('site_email') }}</li>
+                            @if(Cmf::get_store_value('site_address') == '.')
+
+                            @else
+                            <li><i class="fi flaticon-011-maps-and-flags"></i> {{ Cmf::get_store_value('site_address') }}</li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -23,7 +26,9 @@
                             <li><a href="#"><i class="ti-instagram"></i></a></li>
                             <li><a href="#"><i class="ti-google"></i></a></li>
                         </ul>
-                        <a class="top-btn" href="contact.html">Company Profile</a>
+                        @if(Cmf::get_store_value('company_profile'))
+                        <a download="" class="top-btn" href="{{ url('public/images') }}/{{ Cmf::get_store_value('company_profile') }}">Company Profile</a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -64,15 +69,7 @@
                                         <li><a href="practice-single.html">Practice Single</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Servivces</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="case.html">Cases</a></li>
-                                        <li><a href="case-s2.html">Cases Style 2</a></li>
-                                        <li><a href="case-s3.html">Cases Style 3</a></li>
-                                        <li><a href="case-single.html">Cases Single</a></li>
-                                    </ul>
-                                </li>
+                                <li class="@if($url) @else active @endif"><a href="{{ url('services') }}">Services</a></li>
                                 <li><a href="contact.html">News and Updates</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>

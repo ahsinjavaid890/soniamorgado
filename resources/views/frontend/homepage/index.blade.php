@@ -84,84 +84,53 @@
 <!-- end of wpo-about-section -->
 
 <!-- start wpo-practice-section -->
-
-<!-- end wpo-practice-section -->
-<!-- start wpo-testimonials-section -->
-<section class="wpo-testimonials-section-s2 section-padding">
+<section class="wpo-service-section section-padding">
    <div class="container">
-       <div class="wpo-testimonials-wrap">
-           <div class="row align-items-center">
-               <div class="col-lg-6 col-12">
-                   <div class="wpo-testimonials-active owl-carousel">
-                       <div class="wpo-testimonials-item">
-                           <p>“Elementum viverra tortor rhoncus nunc. Nunc proin lacinia interdum nulla fusce
-                               nam. Sagittis dolor hendrerit donec in eu, facilisis lobortis. Hendr laoret
-                               pretium veslum egestas.” </p>
-                           <div class="wpo-testimonial-info">
-                               <div class="wpo-testimonial-info-img">
-                                   <img src="{{ url('public/front/images/testimonial/img-1.jpg') }}" alt="">
-                               </div>
-                               <div class="wpo-testimonial-info-text">
-                                   <h5>Milani Harverd</h5>
-                                   <span>CEO Of GRK Egency</span>
-                               </div>
+      <div class="row align-items-center">
+         <div class="col-lg-5">
+            <div class="wpo-section-title">
+               <h2 style="color:black">The Area Where We Practice Our Law</h2>
+            </div>
+         </div>
+         <div class="col-lg-5 offset-lg-2">
+            <div class="wpo-section-title">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col col-lg-4 col-12 service-thumbs">
+            <ul class="service-thumbs-outer nav nav-tabs">
+                @foreach(DB::table('services')->orderby('id')->get() as $key => $r)
+                <li class="nav-item">
+                    <a class="service-thumb @if($key == 1) active @endif nav-link">{{ $r->name }}<span class="number">{{ $r->id }}</span></a>
+                </li>
+                @endforeach
+            </ul>
+         </div>
+         <div class="col col-lg-8 col-12 service-content">
+            <div class="service-content-outer">
+               <div class="tab-content">
+                 @foreach(DB::table('services')->orderby('id')->get() as $keytwo => $rtwo)
+                  <div class="tab-pane @if($keytwo == 1) active @endif">
+                     <div class="service-data">
+                        <div class="service-data-img">
+                           <img alt="" srcset="" src="{{ url('public/images') }}/{{ $rtwo->image }}" width="870" height="720" decoding="async" data-nimg="1" loading="lazy" style="color: transparent;">
+                           <div class="service-data-text">
+                              <h3><a href="/practice/Personal-Injury">{{ $rtwo->name }}</a></h3>
+                              <p>{{ $rtwo->description }} <a href="{{ url('service') }}/{{ $rtwo->url }}">More About..</a></p>
                            </div>
-                       </div>
-                       <div class="wpo-testimonials-item">
-                           <p>“Elementum viverra tortor rhoncus nunc. Nunc proin lacinia interdum nulla fusce
-                               nam. Sagittis dolor hendrerit donec in eu, facilisis lobortis. Hendr laoret
-                               pretium veslum egestas.” </p>
-                           <div class="wpo-testimonial-info">
-                               <div class="wpo-testimonial-info-img">
-                                   <img src="{{ url('public/front/images/testimonial/img-3.jpg') }}" alt="">
-                               </div>
-                               <div class="wpo-testimonial-info-text">
-                                   <h5>Aliza Anney</h5>
-                                   <span>Model Belarus</span>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="wpo-testimonials-item">
-                           <p>“Elementum viverra tortor rhoncus nunc. Nunc proin lacinia interdum nulla fusce
-                               nam. Sagittis dolor hendrerit donec in eu, facilisis lobortis. Hendr laoret
-                               pretium veslum egestas.” </p>
-                           <div class="wpo-testimonial-info">
-                               <div class="wpo-testimonial-info-img">
-                                   <img src="{{ url('public/front/images/testimonial/img-2.jpg') }}" alt="">
-                               </div>
-                               <div class="wpo-testimonial-info-text">
-                                   <h5>David Miller</h5>
-                                   <span>Designer UK</span>
-                                   <span>Designer UK</span>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="wpo-testimonials-item">
-                           <p>“Elementum viverra tortor rhoncus nunc. Nunc proin lacinia interdum nulla fusce
-                               nam. Sagittis dolor hendrerit donec in eu, facilisis lobortis. Hendr laoret
-                               pretium veslum egestas.” </p>
-                           <div class="wpo-testimonial-info">
-                               <div class="wpo-testimonial-info-img">
-                                   <img src="{{ url('public/front/images/testimonial/img-3.jpg') }}" alt="">
-                               </div>
-                               <div class="wpo-testimonial-info-text">
-                                   <h5>David Miller</h5>
-                                   <span>Designer UK</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
+                        </div>
+                     </div>
+                  </div>
+                  @endforeach
                </div>
-               <div class="col-lg-6">
-                   <img src="{{ url('public/front/images/testimonial/r-img.jpg') }}" alt="">
-               </div>
-           </div>
-       </div>
-
-   </div> <!-- end container -->
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
-<!-- end wpo-testimonials-section -->
-<!-- start wpo-case-section -->
+<!-- end wpo-practice-section -->
 
 <!-- end case-section -->
 <!-- start wpo-fun-fact-section -->
@@ -201,14 +170,14 @@
 </section>
 <!-- end wpo-fun-fact-section -->
 <!-- start wpo-Team-section -->
-<section class="wpo-team-section section-padding pt-0">
+<section class="wpo-team-section section-padding pt-50" style="background-color:white;">
    <div class="container">
        <div class="wpo-team-wrap">
            <div class="row align-items-center">
                <div class="col-lg-5">
                    <div class="wpo-section-title">
                        <span>Qualified Attorneys</span>
-                       <h2>Meet Our Experts</h2>
+                       <h2 style="color:black">Meet Our Experts</h2>
                    </div>
                </div>
            </div>

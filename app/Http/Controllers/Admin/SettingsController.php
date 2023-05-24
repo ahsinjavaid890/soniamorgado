@@ -101,6 +101,10 @@ class SettingsController extends Controller
         {
             $settings->footer_logo = Cmf::sendimagetodirectory($request->footer_logo);
         }
+        if(!empty($request->company_profile))
+        {
+            $settings->company_profile = Cmf::sendimagetodirectory($request->company_profile);
+        }
         if(!empty($request->favicon))
         {
             $settings->favicon = Cmf::sendimagetodirectory($request->favicon);

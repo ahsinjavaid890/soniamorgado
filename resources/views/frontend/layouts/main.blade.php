@@ -20,6 +20,7 @@
     <link href="{{ url('public/front/css/jquery.fancybox.css') }}" rel="stylesheet">
     <link href="{{ url('public/front/css/odometer-theme-default.css') }}" rel="stylesheet">
     <link href="{{ url('public/front/sass/style.css') }}" rel="stylesheet">
+    <link href="{{ url('public/front/css/services.css') }}" rel="stylesheet">
 </head>
 <body>
 		<div class="page-wrapper">
