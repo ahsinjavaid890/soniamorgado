@@ -1,0 +1,297 @@
+/*--------------------------------------------------------------
+10. wpo-case-section
+--------------------------------------------------------------*/
+
+.service-single-section,
+.project-single-section {
+
+    @media(max-width:991px){
+       padding: 50px 0;
+    }
+
+    .service-content {
+        .service-content-top {
+            text-align: center;
+            margin-bottom: 40px;
+
+            h3 {
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 55px;
+                text-align: center;
+
+                @media(max-width:991px) {
+                    font-size: 30px;
+                    line-height: 45px;
+                }
+
+                @media(max-width:575px) {
+                    font-size: 25px;
+                    line-height: 32px;
+                }
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 25px;
+
+                @media(max-width:575px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .service-content>.img-holder {
+        margin-bottom: 45px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .case-details-wrap {
+        padding-bottom: 80px;
+
+        @media(max-width:991px) {
+            padding-bottom: 40px;
+        }
+
+        .case-details-left {
+            background: #F8F8F8;
+
+            h3 {
+                padding: 20px;
+                background: #DDDDDD;
+            }
+
+            ul {
+                padding: 30px;
+
+                li {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: #001635;
+                    margin-bottom: 20px;
+                    list-style: none;
+                    font-family: $heading-font;
+
+                    @media(max-width:575px) {
+                        font-size: 16px;
+                        line-height: 27px;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    span {
+                        font-size: 16px;
+                        color: #8c8c8c;
+                        display: inline-block;
+                        position: relative;
+                        padding-left: 5px;
+                        font-family: $base-font;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .case-details-right {
+
+            @media(max-width:991px) {
+                margin-top: 40px;
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 35px;
+                line-height: 48px;
+                margin-bottom: 15px;
+                margin-top: -12px;
+
+                @media(max-width:575px) {
+                    font-size: 25px;
+                    line-height: 38px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+    }
+
+
+    .case-info-wrap {
+        padding-bottom: 40px;
+
+        h3 {
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 48px;
+            margin-bottom: 30px;
+
+            @media(max-width:575px) {
+                font-size: 25px;
+                line-height: 38px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .case-challenge {
+            ul {
+                list-style: none;
+                margin-top: 20px;
+
+                li {
+                    padding-bottom: 15px;
+                    position: relative;
+                    padding-left: 30px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 30px;
+
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        content: "\e661";
+                        font-family: 'themify';
+                        font-size: 14px;
+                    }
+                }
+
+            }
+        }
+
+        .case-approach {
+            @media(max-width:991px) {
+                padding: 30px 0;
+            }
+        }
+
+        .case-result {
+            @media(min-width:991px) {
+                padding-left: 30px;
+            }
+        }
+    }
+
+    .case-attorney {
+        h3 {
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 48px;
+            margin-bottom: 40px;
+
+            @media(max-width:575px) {
+                font-size: 25px;
+                line-height: 38px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .case-attorney-wrap {
+            background: #F8F8F8;
+
+            .case-attorney-img {
+                img {
+                    width: 100%;
+
+                    @media(max-width:1399px){
+                      min-height: 450px;
+                      object-fit: cover;
+                    }
+                    @media(max-width:1199px){
+                      min-height: 480px;
+                      object-fit: cover;
+                    }
+                    @media(max-width:991px){
+                      min-height: 100%;
+                    }
+                }
+            }
+
+            .case-text {
+                padding: 30px;
+
+                @media(max-width:575px) {
+                    padding: 15px;
+                }
+
+                h4 {
+                    font-weight: 400;
+                    font-size: 30px;
+                    line-height: 41px;
+
+                    @media(max-width:575px) {
+                        font-size: 25px;
+                        line-height: 32px;
+                    }
+                }
+
+                span {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 23px;
+                    margin-bottom: 30px;
+
+                    @media(max-width:575px) {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                a {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 35px;
+                    color: #9D7B56;
+
+                    i {
+                        position: relative;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .wpo-case-section-s3 {
+        padding-top: 100px;
+
+        @media(max-width:1199px) {
+            padding-top: 80px;
+        }
+
+        @media(max-width:991px) {
+            padding-top: 40px;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 48px;
+            margin-bottom: 30px;
+
+            @media(max-width:575px) {
+                font-size: 25px;
+                line-height: 38px;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+}

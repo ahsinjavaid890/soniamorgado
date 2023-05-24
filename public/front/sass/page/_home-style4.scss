@@ -1,0 +1,85 @@
+/*======================================
+ 7. Home-style-3 
+ =======================================*/
+
+/* 7.1 wpo-about-section-s3 */
+
+.wpo-about-section-s4 {
+    background: $white;
+    .wpo-about-section-wrapper {
+
+        .visible-text {
+
+            h2 {
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #E9EDF0;
+                opacity: .5;
+            }
+        }
+
+        .wpo-about-content {
+            padding-right: 40px;
+
+            @media(max-width:991px) {
+                padding-right: 0;
+                margin-top: 0;
+                margin-bottom: 40px;
+            }
+
+             h2 {
+                color: $dark-gray;
+             }
+
+             p{
+                color: $body-color;
+             }
+        }
+
+        .wpo-about-img {
+            position: relative;
+            margin-left: 200px;
+            border-color: $border-color-s2;
+
+            @media(max-width:1399px) {
+                margin-left: 120px;
+            }
+
+            @media(max-width:420px) {
+                margin-left: 80px;
+            }
+
+            .about-img-inner {
+                background-color: $white;
+                border-color: $border-color-s2;
+            }
+        }
+    }
+}
+
+
+/* 7.2 wpo-case-section-s3 */
+
+.wpo-case-section-s3{
+    background: $white;
+    position: relative;
+
+    &:before{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 120px;
+        content: "";
+        background: $section-bg-dark;
+    }
+
+    &.b-none{
+        &:before{
+            display: none;
+        }
+    }
+
+    .case-menu li a{
+        color: $body-color;
+    }
+}

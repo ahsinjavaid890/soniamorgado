@@ -1,0 +1,353 @@
+/*--------------------------------------------------------------
+9. wpo-service-single-section
+--------------------------------------------------------------*/
+
+.wpo-service-single-section {
+
+    @media(max-width:991px) {
+        padding-bottom: 60px;
+    }
+
+    .wpo-service-single-wrap {
+        img {
+            width: 100%;
+        }
+
+        .wpo-service-single-content {
+            .wpo-service-single-content-des {
+                padding: 60px 0 20px;
+
+                @media(max-width:767px) {
+                    padding: 35px 0 0;
+                }
+
+                h2 {
+                    font-weight: 400;
+                    font-size: 40px;
+                    line-height: 55px;
+                    font-family: $heading-font;
+                    margin-bottom: 30px;
+                    color: $black;
+
+                    @media(max-width:767px) {
+                        font-size: 25px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                p {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .rule-area {
+                h3 {
+                    font-weight: 400;
+                    font-size: 30px;
+                    line-height: 41px;
+                    color: $black;
+                    margin-bottom: 20px;
+
+                    @media(max-width:767px){
+                        font-size: 25px;
+                        line-height: 35px;
+                     }
+                }
+
+                ul.rules {
+                    list-style: none;
+                    margin-top: 20px;
+
+                    li {
+                        padding-bottom: 15px;
+                        position: relative;
+                        padding-left: 30px;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 30px;
+
+                        &:before {
+                            position: absolute;
+                            left: 0;
+                            top: 5px;
+                            content: "\e661";
+                            font-family: 'themify';
+                            font-size: 14px;
+                        }
+                    }
+
+                }
+
+                .wpo-service-single-sub-img {
+                    margin-top: 50px;
+
+                    ul {
+                        display: flex;
+                        list-style: none;
+                        margin: 0 -10px;
+                        margin-bottom: 20px;
+                    }
+
+                    li {
+                        padding-left: 10px;
+                        padding-right: 10px;
+
+                        &:last-child {
+                            padding-left: 10px;
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .wpo-faq-section {
+            padding-top: 40px;
+            margin-top: 40px; 
+            border-top: 1px solid #D9D9D9;
+
+            h2 {
+                font-size: 30px;
+                font-family: $heading-font;
+                margin-bottom: 30px;
+
+                @media(max-width:767px){
+                   font-size: 25px;
+                }
+            }
+
+            p{
+                margin-bottom: 40px;
+            }
+
+
+            .accordion {
+                border: 1px solid #e1e1e1;
+            }
+
+            .accordion-item {
+                border: 0;
+                border-bottom: 1px solid #e1e1e1;
+
+                .accordion-body {
+                    padding:30px 20px;
+
+                    p{
+                        margin-bottom: 0px;
+                    }
+                }
+
+                button {
+                    padding: 16px;
+                    border: 0;
+                    border-radius: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-size: 20px;
+                    color: $white;
+                    text-align: left;
+                    font-family: $base-font;
+                    font-weight: 600;
+                    background: $section-bg-dark-2;
+                    padding: 30px 20px;
+
+                    &::after {
+                        background: none;
+                        font-family: "themify";
+                        content: "\e622";
+                        font-size: 15px;
+                        transform: rotate(0deg);
+                        font-weight: 700;
+                    }
+
+
+                    &.collapsed {
+                        color: #373b3e;
+                        background: #F9F9F9;
+
+                        &::after {
+                            content: "\e61a";
+                        }
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        border-color: #DCDCDC;
+
+                    }
+
+
+                }
+
+                .accordion-collapse {
+                    border: 0;
+                }
+            }
+
+            .accordion-button {
+                background: transparent;
+            }
+        }
+    }
+
+}
+
+.wpo-single-sidebar {
+    padding-right: 40px;
+
+    @media(max-width:1199px) {
+        padding-right: 20px;
+    }
+    @media(max-width:991px) {
+        padding-right: 0;
+        margin-top: 60px;
+    }
+
+    .widget {
+        margin-bottom: 40px;
+        background: #f9f9f9;
+
+        h2 {
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 41px;
+            position: relative;
+            text-align: left;
+            display: block;
+            margin-bottom: 0px;
+            padding: 20px 30px;
+            background: #DDDDDD;
+
+            @media(max-width:1199px) {
+                font-size: 25px;
+                line-height: 38px;
+            }
+        }
+
+        ul {
+            list-style: none;
+        }
+
+    }
+
+    .wpo-service-widget {
+        ul {
+            padding: 30px 40px;
+
+            @media(max-width:1199px) {
+                padding: 20px 20px;
+            }
+
+            li {
+                a {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 23px;
+                    display: block;
+                    padding: 15px 0;
+                    color: #525252;
+                    border-bottom: 1px solid #e1e1e1;
+                    padding-left: 20px;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        top: 23px;
+                        width: 6px;
+                        height: 6px;
+                        content: "";
+                        background: $theme-primary-color;
+                        border-radius: 50%;
+                    }
+
+                    &:hover {
+                        color: $theme-primary-color;
+                    }
+
+
+                }
+
+                &:last-child {
+                    a {
+                        padding-bottom: 0;
+                        border-bottom: 0;
+                    }
+                }
+
+                &:first-child {
+                    a {
+                        padding-top: 0;
+
+                        &:before {
+                            top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wpo-contact-widget {
+        border: 0;
+        background: $section-bg-dark-2 ;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 40px;
+
+        @media(max-width:1199px) {
+            padding:30px 20px;
+        }
+
+        i {
+            display: block;
+            font-size: 50px;
+            color: $theme-primary-color;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 30px;
+            text-align: center;
+            font-family: $heading-font;
+            color: $white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 55px;
+            color: $white;
+            margin-bottom: 20px;
+
+            @media(max-width:1199px) {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            color: $white;
+            font-size: 18px;
+        }
+
+
+        a {
+            display: inline-block;
+            padding: 10px 30px;
+            background: $theme-primary-color;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            position: relative;
+            margin-top: 10px;
+            color: $dark-gray;
+            font-family: $heading-font;
+        }
+    }
+}
